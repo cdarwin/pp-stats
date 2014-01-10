@@ -30,7 +30,11 @@ module PPStats
         exit
       end
 
-      options[:modulepath] = ARGV.first
+      if ARGV.first.nil?
+        options[:modulepath] = '.'
+      else
+        options[:modulepath] = ARGV.first
+      end
       if !File.directory? options[:modulepath]
         PPStats::Format.errorf "module folder '#{options[:modulepath]}' not found"
         exit
