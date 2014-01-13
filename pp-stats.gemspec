@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  s.homepage      = 'http://rubygems.org/gems/pp-stats'
+  s.homepage      = 'https://github.com/cdarwin/pp-stats'
   s.license       = 'MIT'
 end
